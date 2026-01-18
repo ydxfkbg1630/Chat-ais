@@ -1,0 +1,80 @@
+{
+  "headless": false,
+  "browser_mode": "cdp",
+  "chrome_channel": "chrome",
+  "user_data_dir": "chrome_profile",
+  "cdp_url": "http://127.0.0.1:9222",
+  "browser_args": [],
+  "start_side": "chatgpt",
+  "seed_prompt": "",
+  "max_rounds": 0,
+  "poll_seconds": 1.0,
+  "stable_seconds": 2.0,
+  "max_wait_seconds": 600,
+  "type_delay_ms": 5,
+  "save_transcript": true,
+  "transcript_path": "transcript.txt",
+  "dashboard": {
+    "enabled": true,
+    "host": "127.0.0.1",
+    "port": 8765,
+    "max_events": 200
+  },
+  "chatgpt": {
+    "url": "https://chatgpt.com",
+    "input_selectors": [
+      "textarea#prompt-textarea",
+      "div[contenteditable='true']"
+    ],
+    "assistant_selectors": [
+      "div[data-message-author-role='assistant']"
+    ],
+    "assistant_exclude_selectors": [],
+    "busy_selectors": [
+      "button[data-testid='stop-button']",
+      "button[aria-label='Stop generating']",
+      "button[aria-label='停止生成']",
+      "button[aria-label='Stop']",
+      "button[aria-label='停止']"
+    ],
+    "ignore_line_contains": [
+      "Show thinking",
+      "You stopped this response"
+    ]
+  },
+  "gemini": {
+    "url": "https://gemini.google.com",
+    "input_selectors": [
+      "div[contenteditable='true'][data-lexical-editor='true']",
+      "div[role='textbox'][contenteditable='true']",
+      "div.ql-editor[contenteditable='true']"
+    ],
+    "assistant_selectors": [
+      "div[data-test-id='response-text']",
+      "div.response-content",
+      "div.response-content div.markdown"
+    ],
+    "assistant_exclude_selectors": [
+      "button",
+      "a",
+      "[role='button']",
+      "header",
+      "nav",
+      "[role='banner']"
+    ],
+    "busy_selectors": [
+      "button[aria-label='Stop generating']",
+      "button[aria-label='停止生成']",
+      "button[aria-label='Stop']",
+      "button[aria-label='停止']",
+      "button:has-text('Answer now')",
+      "text=Answer now"
+    ],
+    "ignore_line_contains": [
+      "Show thinking",
+      "You stopped this response",
+      "Examining Initial Assumptions",
+      "Answer now"
+    ]
+  }
+}

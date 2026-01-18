@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chat Bridge Monitor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient"></div>
+    <main class="app">
+      <header class="topbar">
+        <div class="title-block">
+          <p class="eyebrow">Live Relay</p>
+          <h1>Chat Bridge</h1>
+          <p class="subtitle">ChatGPT <span><-></span> Gemini</p>
+        </div>
+        <div class="status">
+          <span class="dot" id="status-dot"></span>
+          <span id="status-text">Connecting...</span>
+        </div>
+      </header>
+      <section class="boards">
+        <div class="panel panel--gpt">
+          <div class="panel__header">
+            <h2>ChatGPT</h2>
+            <span class="count" id="count-chatgpt">0</span>
+          </div>
+          <div class="stream" id="stream-chatgpt"></div>
+        </div>
+        <div class="panel panel--gemini">
+          <div class="panel__header">
+            <h2>Gemini</h2>
+            <span class="count" id="count-gemini">0</span>
+          </div>
+          <div class="stream" id="stream-gemini"></div>
+        </div>
+      </section>
+      <footer class="footer">
+        <p>Keep this page open to watch the relay in real time.</p>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

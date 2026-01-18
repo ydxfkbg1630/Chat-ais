@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+thumbs.db
+
+# Local runtime artifacts
+chrome_profile/
+transcript.txt
+*.sqlite
+
+# Editor settings
+.idea/
+.vscode/
